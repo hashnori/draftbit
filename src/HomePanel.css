@@ -1,0 +1,26 @@
+.HomePanel {
+    position: absolute;
+    background: #030617;
+    max-width: calc(100% - 400px);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: auto;
+    right: 0;
+
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  p {
+    box-shadow: inset 0 0 0 1px #38bdf8, inset 0 0 0 3px rgba(56, 189, 248, .3), inset 0 0 0 999999px rgba(56, 189, 248, .1);
+  }
+
+  .mobileScreeMain {
+    max-height: 852px;
+    max-width: 393px;
+    min-height: 852px;
+    min-width: 393px;
+    mask-image: radial-gradient(white, black);
+    background: #000;
+    border: 6px solid rgb(51 65 85/1);
+}

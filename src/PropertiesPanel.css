@@ -1,0 +1,285 @@
+/* Styles for Margins & Padding Collapsible section */
+
+.PropertiesPanel {
+  width: 400px;
+  background-color: #3d4b6c;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Collapsible {
+  margin-bottom: 10px;
+}
+
+.Collapsible-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #28334d;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.Collapsible-content {
+  margin: 10px;
+  padding: 10px;
+  background-color: #0f172a;
+  border-radius: 4px;
+}
+
+.MarginsPaddingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MarginsPaddingBox {
+  width: 176px;
+  height: 104px;
+  border: 1px solid rgb(51 65 85/1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+    z-index: 2;
+}
+
+.MarginsPaddingInnerBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.defaultLabel,
+.changedLabel,
+.focusedLabel {
+  width: 40px;
+  height: 26px;
+  text-align: center;
+  padding-bottom: .25rem;
+  padding-top: .25rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: none;
+  border: 1px solid rgb(71 85 105 / 1);
+  color: rgb(226 232 240 / 1);
+  font-size: 12px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* outer elements for margin */
+.MarginsPaddingContainer {
+  padding: 50px;
+  position: relative;
+}
+
+.outerElementsForMargin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.outerElementsForMargin .input:first-child {
+  right: 0;
+  left: auto;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.outerElementsForMargin .input:nth-child(2) {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.outerElementsForMargin .input:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.outerElementsForMargin .input {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outerElementsForMargin .input:nth-child(4) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+}
+
+.outerElementsForMargin.active{
+  z-index: 8;
+}
+
+
+/* dropdown element detail */
+.hoverItemDetail {
+  display: none;
+  background: rgb(15 23 42 / 1);
+  border: 2px solid rgb(71 85 105 / 1);
+  position: absolute;
+  padding: 0;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.outerElementsForMargin .input:first-child .hoverItemDetail {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 260px;
+  right: 69px;
+  left: auto;
+  z-index: 2;
+  font-size: 14px;
+  /* height: 100%; */
+}
+
+.hoverItemDetail h6 {
+  font-size: 14px;
+  margin: 0;
+  text-transform: capitalize;
+  margin: 10px 0px 2px 0px;
+  padding-left: 10px;
+}
+
+.hoverItemDetail p {
+  font-size: 12px;
+  color: #e5e7eb;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  font-style: italic;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.staticValue {
+  border: 1px solid rgb(51 65 85/1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.staticValue input {
+  text-align: right;
+  background: none;
+  border: 1px solid #cccc;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.staticValue p {
+  margin: 0;
+  padding: 0;
+}
+
+.staticValue input:focus {
+  outline: none !important;
+}
+
+.hoverItemDetail::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgb(71 85 105 / 1);
+  position: absolute;
+  background: #0f172a;
+}
+
+.outerElementsForMargin .input:first-child .hoverItemDetail::after {
+  right: -7px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(45deg);
+  border-left: 0;
+  border-bottom: 0;
+}
+.hoverItemDetail.active {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+.outerElementsForMargin .input:nth-child(2) .hoverItemDetail {
+  top: 50px;
+  width: 250px;
+}
+
+.outerElementsForMargin .input:nth-child(2) .hoverItemDetail::after {
+  margin: auto;
+  border-left: 0;
+  border-bottom: 0;
+  left: 0;
+  right: 0;
+  top: -7px;
+  bottom: auto;
+  transform: rotate(-45deg);
+}
+.outerElementsForMargin .input:nth-child(3) .hoverItemDetail {
+  width: 250px;
+  top: -13px;
+}
+
+.outerElementsForMargin .input:nth-child(3) .hoverItemDetail:after {
+  margin: auto;
+  border-left: 0;
+  border-bottom: 0;
+  left: 0;
+  right: 0;
+  top: -7px;
+  bottom: auto;
+  transform: rotate(-45deg);
+}
+.outerElementsForMargin .input:nth-child(4) .hoverItemDetail {
+  left: 61px;
+  width: 250px;
+}
+
+.outerElementsForMargin .input:nth-child(4) .hoverItemDetail::after {
+  left: -7px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(-135deg);
+  border-left: 0;
+  border-bottom: 0;
+}
+span.crossIcon {
+  position: absolute;
+  right: 8px;
+  top: 9px;
+  cursor: pointer;
+  font-size: 11px;
+}
